@@ -3,30 +3,22 @@ This repository contains a Jupyter Notebook that performs decline curve analysis
 
 📂 Contents
 oil_decline_analysis.ipynb – Main notebook performing the analysis.
-
 sample.csv – Sample dataset with historical oil production and dates.
 
-README.md – Project documentation and overview.
 
 📊 Project Overview
 Decline Curve Analysis is a key technique in reservoir engineering and production forecasting. This notebook focuses on modeling oil production decline using a hyperbolic decline curve, with the initial production rate (qᵢ) fixed and the decline rate (D) and hyperbolic factor (b) estimated from data.
 
 🧰 Tools & Libraries Used
 The project uses the following Python libraries:
-
 pandas – Data manipulation and preprocessing
-
 numpy – Numerical computations
-
 scipy.optimize.curve_fit – Non-linear curve fitting to estimate decline parameters
-
 plotly.graph_objects – Interactive plotting for visualizing actual and forecasted production trends
 
 📌 Dataset
 The dataset sample.csv contains two columns:
-
 Monthly Production Date – The date of the production record (monthly)
-
 Monthly Oil – Oil production value for the corresponding month
 
 🔧 Features & Functionality
