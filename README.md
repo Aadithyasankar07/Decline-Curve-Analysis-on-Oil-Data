@@ -1,25 +1,57 @@
-# Decline-Curve-Analysis-on-Sample-data
-This repository contains a Jupyter Notebook that performs decline curve analysis (DCA) using a hyperbolic model on historical oil production data. It demonstrates how to forecast future production based on past trends and visualize the results interactively.
+# 🛢️ Decline Curve Analysis on Sample Oil Production Data
 
-📂 Contents
-oil_decline_analysis.ipynb – Main notebook performing the analysis.
-sample.csv – Sample dataset with historical oil production and dates.
+This repository contains a Jupyter Notebook that performs **Decline Curve Analysis (DCA)** using a **hyperbolic decline model** on historical oil production data. The goal is to forecast future production trends and visualize the results interactively.
 
+---
 
-📊 Project Overview
-Decline Curve Analysis is a key technique in reservoir engineering and production forecasting. This notebook focuses on modeling oil production decline using a hyperbolic decline curve, with the initial production rate (qᵢ) fixed and the decline rate (D) and hyperbolic factor (b) estimated from data.
+## 📂 Contents
 
-🧰 Tools & Libraries Used
-The project uses the following Python libraries:
-pandas – Data manipulation and preprocessing
-numpy – Numerical computations
-scipy.optimize.curve_fit – Non-linear curve fitting to estimate decline parameters
-plotly.graph_objects – Interactive plotting for visualizing actual and forecasted production trends
+- `oil_decline_analysis.ipynb` – Main notebook performing the analysis  
+- `sample.csv` – Sample dataset with historical oil production and dates
 
-📌 Dataset
-The dataset sample.csv contains two columns:
-Monthly Production Date – The date of the production record (monthly)
-Monthly Oil – Oil production value for the corresponding month
+---
 
-🔧 Features & Functionality
-Preprocessing of time series data into monthly intervals since production start.
+## 📊 Project Overview
+
+**Decline Curve Analysis (DCA)** is a widely-used method in petroleum engineering to estimate future oil and gas production based on historical data. This notebook:
+
+- Applies a **hyperbolic decline curve** model  
+- Fixes the **initial production rate (qᵢ)** as the peak value  
+- Estimates the **decline rate (D)** and **hyperbolic factor (b)** via curve fitting  
+- Forecasts future production and visualizes it alongside historical data
+
+**Model equation**:
+
+\[
+q(t) = \frac{q_i}{(1 + bDt)^{1/b}}
+\]
+
+---
+
+## 🧰 Tools & Libraries Used
+
+- `pandas` – for data manipulation  
+- `numpy` – for numerical calculations  
+- `scipy.optimize.curve_fit` – for curve fitting  
+- `plotly.graph_objects` – for interactive visualization
+
+---
+
+## 📌 Dataset
+
+The file `sample.csv` includes:
+
+- **Monthly Production Date** – Monthly timestamp of production  
+- **Monthly Oil** – Oil production value for the corresponding month
+
+---
+
+## 🔧 Features & Functionality
+
+- ✅ Clean and preprocess time-series oil production data  
+- ✅ Convert date to "months since production started"  
+- ✅ Fit hyperbolic decline model using curve fitting  
+- ✅ Forecast production for 12 months beyond actual data  
+- ✅ Plot historical and predicted production rates interactively
+
+---
